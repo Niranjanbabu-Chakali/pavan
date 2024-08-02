@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #34353b;
+}
+
+header {
+  height: 100vh;
+  padding: 36px 100px;
+  background-image: url(asset/IMG_20231001_082328-removebg-pre.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+.landing {
+  display: flex;
+  height: 90vh;
+  background-color: transparent;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+}
+
+.landing .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the start of the flex container */
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the left */
+  text-align: left; /* Left-align text */
+}
+
+.birthday-text {
+  font-size: 2.5rem; /* Adjust size as needed */
+  color: #fbfbfb; /* Color of "Happy Birthday" text */
+  font-weight: 800;
+  letter-spacing: -0.10em;
+  margin-bottom: -100px; /* Space between "Happy Birthday" and "Pavan" */
+  animation: floatText 3s ease-in-out infinite;
+}
+
+.birthday-text span {
+  display: inline-block;
+  animation: floatLetter 4s ease-in-out infinite;
+}
+
+.birthday-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+.birthday-text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.birthday-text span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.birthday-text span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.birthday-text span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.birthday-text span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.birthday-text span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.birthday-text span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.birthday-text span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.birthday-text span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.birthday-text span:nth-child(11) {
+  animation-delay: 1s;
+}
+.birthday-text span:nth-child(12) {
+  animation-delay: 1.1s;
+}
+.birthday-text span:nth-child(13) {
+  animation-delay: 1.2s;
+}
+.birthday-text span:nth-child(14) {
+  animation-delay: 1.3s;
+}
+
+.name-container h3 {
+  font-size: 15rem; /* Increase font size for larger text */
+  color: #fec86a;
+  margin: 0;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.portfolio h1 {
+  font-size: 56px;
+  font-weight: 700;
+  color: #cc9e4e;
+  font-family: "Libre Baskerville", serif;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  background-color: #fec86a;
+  border-radius: 20px;
+  border: .2rem solid #fec86a;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.02);
+}
+
+.portfolio-card img {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  height: 30vw;
+  width: 30vw;
+  background-color: #34353ba2;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card .overlay h3 {
+  color: #fec86a;
+  font-size: 24px;
+}
+
+.portfolio-card .overlay p {
+  color: #fbfbfb;
+  font-size: 16px;
+  text-align: center;
+}
+
+.portfolio-card .overlay button {
+  height: 36px;
+  width: 108px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 12px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.portfolio-card .overlay:hover {
+  opacity: 1;
+}
+
+.portfolio button {
+  margin-top: 50px;
+  height: 48px;
+  width: 144px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.portfolio button:hover {
+  background-color: #cc9e4e;
+}
+
+/* Floating Animations */
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatLetter {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
